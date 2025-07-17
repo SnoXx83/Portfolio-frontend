@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
 import ProjectCard from '../components/ProjectCard'; 
 import { Project } from '../types';
-import '../styles/Project.css'
-
 
 const ProjectsPage: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -38,21 +36,21 @@ const ProjectsPage: React.FC = () => {
   }, []); 
 
   return (
-    <section id="projets" className="section projects-list-section">
-      <h2 className="section-title">Tous mes Projets</h2>
+    <section id="projets" className="py-8 px-4 text-center">
+      <h2 className="text-4xl text-white font-bold  mt-40">Tous mes Projets</h2>
 
       {loading && (
-        <p className="loading-message">Chargement des projets...</p>
+        <p className="text-xl text-blueAccentDark mt-8 p-4 rounded-lg bg-darkBgSection border border-darkBorderLight shadow-md">Chargement des projets...</p>
       )}
       {error && (
-        <p className="error-message">{error}</p>
+        <p className="text-xl text-redAccentDark mt-8 p-4 rounded-lg bg-darkBgSection border border-redAccentDark shadow-md">{error}</p>
       )}
 
       {!loading && !error && projects.length === 0 && (
-        <p className="no-projects-message">Aucun projet à afficher pour le moment.</p>
+        <p className="text-xl text-darkTextSecondary mt-8 p-4 rounded-lg bg-darkBgSection border border-darkBorderLight shadow-md">Aucun projet à afficher pour le moment.</p>
       )}
 
-      <div className="projects-grid">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
         {!loading && !error && projects.map((project: Project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
