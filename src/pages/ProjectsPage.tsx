@@ -16,7 +16,6 @@ const ProjectsPage: React.FC = () => {
 
       try {
         const response = await axios.get<Project[]>(`http://localhost:4000/project`);
-        console.log(response.data); 
         setProjects(response.data);
 
       } catch (err: any) {
@@ -37,7 +36,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <section id="projets" className="py-8 px-4 text-center">
-      <h2 className="text-4xl text-white font-bold  mt-40">Tous mes Projets</h2>
+      <h2 className="text-4xl font-bold text-blueAccentDark mb-12 text-center mt-20">Tous mes Projets</h2>
 
       {loading && (
         <p className="text-xl text-blueAccentDark mt-8 p-4 rounded-lg bg-darkBgSection border border-darkBorderLight shadow-md">Chargement des projets...</p>

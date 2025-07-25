@@ -58,10 +58,10 @@ const ExperiencesPage: React.FC = () => {
 
   return (
     <div className="py-8 px-4 max-w-6xl mx-auto w-full">
-      <h2 className="text-4xl font-bold text-blueAccentDark mb-12 text-center">Mes Expériences Professionnelles & Projets</h2>
+      <h2 className="text-4xl font-bold text-blueAccentDark mb-12 text-center mt-20">Mes Expériences Professionnelles</h2>
 
-      <p className="text-lg text-darkTextSecondary leading-relaxed max-w-3xl mx-auto text-center mb-16">
-        Découvrez mon parcours professionnel et les projets clés qui ont jalonné mon apprentissage et mon développement en tant que développeur full-stack.
+      <p className="text-xl text-darkTextSecondary leading-relaxed max-w-3xl mx-auto text-center mb-16">
+        Découvrez mon parcours professionnel qui ont jalonné mon apprentissage et mon développement en tant que développeur full-stack.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
